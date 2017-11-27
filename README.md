@@ -2,6 +2,14 @@
 # README.md
 # airsonic/airsonic
 -->
+Forked to work with Organizr/Muximux.
+
+Been using the Organizr and Muximux solutions for the past year. I've been trying to get the 'Sonics' programs to work within both solutions off and on for the past few months. Basically, all you need to do is change a few lines on PlayQueue.jsp, podcastchannels.jsp, podcastcahannel.jsp and Playbuttons.jsp. I only use AirSonic for Podcasts therefore I haven't tested this for music but it would require all the same edits (changing "top" to "parent" within specific jsp files). Once you've saved your changes restart your HTTP server. 
+
+Please note, you wouldn't need to make any changes to your settings, back up your current "JSP" folder (\airsonic\WEB-INF\jsp) and simply drop in the JSP folder from this fork or copy the edits.
+
+My service for Muximux occurs over HTTPS, still dealing with a few insecure calls within AirSonic that I still need to clean up. 
+
 Airsonic
 ========
 
