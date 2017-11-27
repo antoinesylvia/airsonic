@@ -122,7 +122,7 @@
         $("#dummy-animation-target").stop();
         $("#dummy-animation-target").animate({"max-width": height}, {
             step: function (now, fx) {
-                top.document.getElementById("playQueueFrameset").rows = "*," + now;
+                parent.document.getElementById("playQueueFrameset").rows = "*," + now;
             },
             duration: duration
         });
