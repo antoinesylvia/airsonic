@@ -46,7 +46,7 @@ PARAMETERS
         </c:when>
         <c:otherwise>
             <img src="<spring:theme code="playImage"/>" alt="<fmt:message key="common.play"/>" style="cursor:pointer"
-                 onclick="top.playQueue.onPlay(${param.id}); return false;" title="<fmt:message key="common.play"/>">
+                 onclick="parent.playQueue.onPlay(${param.id}); return false;" title="<fmt:message key="common.play"/>">
         </c:otherwise>
     </c:choose>
 </c:if>
@@ -55,7 +55,7 @@ PARAMETERS
 <c:if test="${param.asTable}"><td class="fit"></c:if>
 <c:if test="${(empty param.addEnabled or param.addEnabled) and not param.video}">
     <img id="add${param.id}" src="<spring:theme code="addImage"/>" alt="<fmt:message key="main.addlast"/>"
-         onclick="top.playQueue.onAdd(${param.id}); $().toastmessage('showSuccessToast', '<fmt:message key="main.addlast.toast"/>'); return false;"
+         onclick="parent.playQueue.onAdd(${param.id}); $().toastmessage('showSuccessToast', '<fmt:message key="main.addlast.toast"/>'); return false;"
          style="cursor:pointer" title="<fmt:message key="main.addlast"/>">
 </c:if>
 <c:if test="${param.asTable}"></td></c:if>
@@ -63,7 +63,7 @@ PARAMETERS
 <c:if test="${param.asTable}"><td class="fit"></c:if>
 <c:if test="${(empty param.addEnabled or param.addEnabled) and not param.video}">
     <img id="add${param.id}" src="<spring:theme code="addNextImage"/>" alt="<fmt:message key="main.addnext"/>"
-         onclick="top.playQueue.onAddNext(${param.id}); $().toastmessage('showSuccessToast', '<fmt:message key="main.addnext.toast"/>'); return false;"
+         onclick="parent.playQueue.onAddNext(${param.id}); $().toastmessage('showSuccessToast', '<fmt:message key="main.addnext.toast"/>'); return false;"
          style="cursor:pointer" title="<fmt:message key="main.addnext"/>">
 </c:if>
 <c:if test="${param.asTable}"></td></c:if>
