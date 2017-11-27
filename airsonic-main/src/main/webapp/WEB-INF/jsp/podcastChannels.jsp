@@ -64,7 +64,7 @@
                     <c:param name="playEnabled" value="${model.user.streamRole and not model.partyMode}"/>
                     <c:param name="addEnabled" value="${model.user.streamRole and not model.partyMode}"/>
                     <c:param name="asTable" value="true"/>
-                    <c:param name="onPlay" value="top.playQueue.onPlayNewestPodcastEpisode(${i.index})"/>
+                    <c:param name="onPlay" value="parent.playQueue.onPlayNewestPodcastEpisode(${i.index})"/>
                 </c:import>
                 <c:set var="channelTitle" value="${model.channelMap[episode.channelId].title}"/>
 
