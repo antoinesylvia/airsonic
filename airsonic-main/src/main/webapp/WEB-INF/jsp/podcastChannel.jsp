@@ -83,7 +83,7 @@
 
 <h1 id="name"><a href="podcastChannels.view"><fmt:message key="podcastreceiver.title"/></a> &raquo; ${fn:escapeXml(model.channel.title)}</h1>
 <h2>
-    <span class="header"><a href="javascript:top.playQueue.onPlayPodcastChannel(${model.channel.id})"><fmt:message key="common.play"/></a></span>
+    <span class="header"><a href="javascript:parent.playQueue.onPlayPodcastChannel(${model.channel.id})"><fmt:message key="common.play"/></a></span>
 
     <c:if test="${model.user.podcastRole}">
         | <span class="header"><a href="javascript:deleteChannel()"><fmt:message key="common.delete"/></a></span>
@@ -120,7 +120,7 @@
                         <c:param name="playEnabled" value="${model.user.streamRole and not model.partyMode}"/>
                         <c:param name="addEnabled" value="${model.user.streamRole and not model.partyMode}"/>
                         <c:param name="asTable" value="true"/>
-                        <c:param name="onPlay" value="top.playQueue.onPlayPodcastEpisode(${episode.id})"/>
+                        <c:param name="onPlay" value="parent.playQueue.onPlayPodcastEpisode(${episode.id})"/>
                     </c:import>
                 </c:otherwise>
             </c:choose>
